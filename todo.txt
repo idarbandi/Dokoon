@@ -1,2 +1,4 @@
-- Install and Setup Django
-- Install and Setup Vue
+_ DONE Install and Setup Django
+_ DONE Install and Setup Vue 
+_ DONE Include Font Awesome
+_ Setup The Base Templates
