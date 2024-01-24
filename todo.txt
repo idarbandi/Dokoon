@@ -1,4 +1,7 @@
 _ DONE Install and Setup Django
 _ DONE Install and Setup Vue 
 _ DONE Include Font Awesome
-_ Setup The Base Templates
+_ DONE Setup The Base Templates
+_ DONE Create Django apps and Models for Products
+_ DONE Create Serializer and Views for The Products
+
