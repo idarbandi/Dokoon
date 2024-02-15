@@ -1,6 +1,7 @@
 <script>
 // @ is an alias to /src
 import axios from 'axios';
+import productBox from '@/components/productBox.vue';
 
 export default {
   name: 'HomeView',
@@ -10,13 +11,15 @@ export default {
     }
   },
   components: {
+    productBox
   },
   mounted(){
     this.getLatestProducts()
   },
   methods: {
-    getLatestProducts() {
-      axios.get('api/v1/latest_products/').then(response=>{
+    async getLatestProducts() {
+      await axios.get('api/v1/latest_products/').then(response=>{
+        document.title = 'Home' + ' | Dokoon'
         this.LatestProducts = response.data
       }).catch(err => {
         console.log(err)
@@ -25,14 +28,6 @@ export default {
   }
 }
 </script>
-<style scoped>
-  .image{
-    margin-top: -1.25rem;
-    margin-left: -1.25rem;
-    margin-right: -1.25rem;
-
-  }
-</style>
 <template>
   <div class="home">
     <section class="hero is-medium is-dark mb-6">
@@ -50,17 +45,10 @@ export default {
         <h2 class="is-size-2 has-text-centered">
           Latest Products
         </h2>
-        <div class="column is-3" v-for="product in LatestProducts" 
-                                 v-bind:key="product.id"
-        >
-        <div class="box">
-          <figure class="image mb-4">
-            <img src="product.get_thumbnail" alt="">
-          </figure>
-          <h3 class="is-size-4">'{{ product.name }}'</h3>
-          <h3 class="is-size-6 has-text-grey">'{{ product.price }}'</h3>
-          view details
-        </div></div>
+        <product-box
+          v-for="product in LatestProducts"
+          v-bind:key="product.id"
+          v-bind:product='product' />
       </div>
     </div>
   </div>
