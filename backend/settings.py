@@ -39,9 +39,47 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:8080",
+    "http://localhost:8000",
+    'http://127.0.0.1:8000',
+    'http://127.0.0.1:8080',
+    "https://localhost:8080",
+    "https://localhost:8000",
+    'https://127.0.0.1:8000',
+    'https://127.0.0.1:8080'
+]
 
-ROOT_URLCONF = 'backend.urls'
+CORS_ALLOW_METHODS = (
+    "DELETE",
+    "GET",
+    "OPTIONS",
+    "PATCH",
+    "POST",
+    "PUT",
+)
+
+CORS_ALLOW_HEADERS = (
+    "accept",
+    "authorization",
+    "content-type",
+    "user-agent",
+    "x-csrftoken",
+    "x-requested-with",
+)
+
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:8080",
+    "http://localhost:8000",
+    'http://127.0.0.1:8000',
+    'http://127.0.0.1:8080',
+    "https://localhost:8080",
+    "https://localhost:8000",
+    'https://127.0.0.1:8000',
+    'https://127.0.0.1:8080'
+]
+
+ROOT_URLCONF = 'backend.urls'   
 
 TEMPLATES = [
     {
@@ -84,6 +122,16 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ]
+}
 
 
 LANGUAGE_CODE = 'en-us'

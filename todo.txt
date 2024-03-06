@@ -19,3 +19,5 @@ _ DONE implement a loading bar
 _ DONE set Document Title (All Pages)
 _ DONE Make it Possible to view a Category
     _ Convert the Product to a Component
+_ NOT DONE Add Search Capability
+
