@@ -20,4 +20,10 @@ _ DONE set Document Title (All Pages)
 _ DONE Make it Possible to view a Category
     _ Convert the Product to a Component
 _ NOT DONE Add Search Capability
+_ DONE Change Content of Cart
+    _ Increament Content of Cart
+    _ Decreament Content of Cart
+    _ Remove item From Cart
 
+
+CAUTION : Due to The High Quality of This Project I want to give It a 100% (1:35:38)

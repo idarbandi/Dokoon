@@ -2,9 +2,13 @@
     <tr>
         <td><RouterLink to="item.product.get_absolute_url" >{{ item.product.name }}</RouterLink></td>
         <td>{{ item.product.price }}</td>
-        <td>{{ item.quantity }}</td>
+        <td>
+            {{ item.quantity }}
+            <a @click="decrementQuantity(item)">_</a>
+            <a @click="incrementQuantity(item)">+</a>
+        </td>
         <td>$ {{ getItemTotal(item).toFixed(2) }}</td>
-        <td><button>delete</button></td>
+        <td><button class="delete" @click="removeFromCart(item)" >delete</button></td>
     </tr>
 </template>
 
@@ -23,6 +27,28 @@
             getItemTotal(item) {
                 return item.quantity * item.product.price
             },
+            incrementQuantity(item){ 
+                item.quantity += 1
+                this.updateCart()
+            },
+            decrementQuantity(item){ 
+                item.quantity -= 1
+
+                // check if minimum is not less than 0
+                if (item.quantity === 0) {
+                    this.$emit('removeFromCart', item)
+                }
+
+                this.updateCart()
+            },
+            updateCart() {
+                localStorage.setItem('cart', JSON.stringify(this.$store.state.cart))
+            },
+            removeFromCart(item) {
+                this.$emit('removeFromCart', item)
+
+                this.updateCart()
+            }
         },
     }
 </script>
