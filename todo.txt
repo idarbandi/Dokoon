@@ -24,6 +24,8 @@ _ DONE Change Content of Cart
     _ Increament Content of Cart
     _ Decreament Content of Cart
     _ Remove item From Cart
+_ DONE Make it Possible To Login
+
 
 
 CAUTION : Due to The High Quality of This Project I want to give It a 100% (1:35:38)
