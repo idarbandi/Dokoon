@@ -25,7 +25,7 @@ _ DONE Change Content of Cart
     _ Decreament Content of Cart
     _ Remove item From Cart
 _ DONE Make it Possible To Login
+_ DONE Make it Possible To Signin As Well
 
 
-
-CAUTION : Due to The High Quality of This Project I want to give It a 100% (1:35:38)
+CAUTION : Due to The High Quality of This Project I want to give It a 100% (1:43:38)

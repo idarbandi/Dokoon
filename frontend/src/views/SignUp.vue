@@ -60,7 +60,7 @@ export default {
                 this.errors.push('password can not be empty')
             }
 
-            if (this.password.length >= 2) {
+            if (this.password.length <= 2) {
                 this.errors.push('password is to short')
             }
 
