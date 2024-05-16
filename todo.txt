@@ -26,6 +26,6 @@ _ DONE Change Content of Cart
     _ Remove item From Cart
 _ DONE Make it Possible To Login
 _ DONE Make it Possible To Signin As Well
+_ DONE Create a Simple My Account Page
 
-
-CAUTION : Due to The High Quality of This Project I want to give It a 100% (1:43:38)
+CAUTION : Due to The High Quality of This Project I want to give It a 100% (1:52:38)

@@ -53,7 +53,7 @@ export default {
         async getCategory() {
             const categorySlug = this.$route.params.category_slug
 
-            this.$store.commit(setIsLoading, true)
+            this.$store.commit('setIsLoading', true)
             await axios.get(`/api/v1/products/${categorySlug}/`)
             .then(response => {
                 this.category = response.data
@@ -70,7 +70,7 @@ export default {
                     position: 'bottom-right',
                 })
             })
-            this.$store.commit(setIsLoading, false)
+            this.$store.commit('setIsLoading', false)
         }
     }
 
