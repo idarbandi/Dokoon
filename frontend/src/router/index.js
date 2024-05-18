@@ -7,6 +7,7 @@ import Cart from '../views/Cart.vue';
 import SignUp from '../views/SignUp.vue';
 import Login from '@/views/Login.vue';
 import MyAccount from '@/views/MyAccount.vue';
+import Checkout from '@/views/Checkout.vue';
 import store from '../store';
 
 const routes = [
@@ -42,7 +43,16 @@ const routes = [
     path: '/my-account',
     name: 'MyAccount',
     component: MyAccount,
-    // Make Sure The User is Logged In
+    // Make Sure The User is Logged In to Access Account Information
+    meta: {
+      requireLogin: true,
+    },
+  },
+  {
+    path: '/checkout',
+    name: 'Checkout',
+    component: Checkout,
+    // Make Sure The User is Logged In to Pay
     meta: {
       requireLogin: true,
     },

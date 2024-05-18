@@ -26,7 +26,7 @@
             <div class="subtitle">
                 <strong>$ {{ cartTotalPrice.toFixed(2) }}</strong>, {{ cartTotalLength }} items
                 <hr>
-                <router-link to="/cart/checkout" class="button is-dark"> Proceed to Checkout </router-link>
+                <router-link to="/checkout" class="button is-dark"> Proceed to Checkout </router-link>
             </div>
         </div>
     </div>
