@@ -28,6 +28,7 @@ _ DONE Make it Possible To Login
 _ DONE Make it Possible To Signin As Well
 _ DONE Create a Simple My Account Page
 _ DONE Proceed to Checkout (Authentication)
+_ DONE Create a Simple Successful Payment Page
 
 
 CAUTION : Due to The High Quality of This Project I want to give It a 100% (1:52:38)

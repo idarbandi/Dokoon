@@ -33,7 +33,7 @@
             </div>
 
 
-            <div class="column is-multiline">
+            <div class="columns is-multiline">
                 <div class="column is-6">
                     <div class="field">
                         <label>First Name*</label>
