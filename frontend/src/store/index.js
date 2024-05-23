@@ -44,6 +44,11 @@ export default createStore({
     removeToken(state, token) {
       (state.token = token), (state.isAuthenticated = true);
     },
+    clearCart(state) {
+      state.cart = { items: [] };
+
+      localStorage.setItem('cart', JSON.stringify(state.cart));
+    },
   },
   actions: {},
   modules: {},

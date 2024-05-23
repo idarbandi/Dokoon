@@ -2,6 +2,9 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+STRIPE_SECRET_KEY = ''
+
+# Palce Your Stripe Secret Key to Perform Payments up There
 
 SECRET_KEY = 'django-insecure-k2uqk51v#1_h_78_dk2nh&*gorjv(yh+(p1n1iu&8sb*6)1k1h'
 
@@ -22,7 +25,8 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     "corsheaders",
     'djoser',
-    'product'
+    'product',
+    'order'
 ]
 
 

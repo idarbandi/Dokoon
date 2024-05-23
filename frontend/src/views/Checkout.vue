@@ -33,7 +33,7 @@
             </div>
 
 
-            <div class="columns is-multiline">
+            <div class="column is-multiline">
                 <div class="column is-6">
                     <div class="field">
                         <label>First Name*</label>
@@ -132,6 +132,13 @@ mounted() {
     document.title = 'Checkout | Dokoon'
 
     this.cart = this.$store.state.cart
+
+    if (this.cartTotalLength > 0) {
+        this.stripe = Stripe('STRIPE_CODE')
+        const elements = this.stripe.elements();
+        this.card = elements.create('card', {hidePostalCode: true})
+        this.card.mount('#card-element')
+    }
 },
 methods: {
     getItemTotal(item) {
@@ -167,6 +174,62 @@ methods: {
       if (this.place === '') {
         this.errors.push('The Place Field is missing')
       }
+
+      if (this.errors.length) {
+        this.$store.commit('setIsLoading', true)
+        this.stripe.createToken(this.card).then(result => {
+            if (result.error) {
+                this.$store.commit('setIsLoading', false)
+
+                this.errors.push('Something went wrong With Stripe , Please try Again Later')
+
+            } else {
+                this.stripeTokenHandler(result.token)
+            }
+        })
+      }
+
+    },
+    async stripeTokenHandler(token) {
+        const items = []
+
+        for (let i=0; i < this.cart.items.length; i++) {
+            const item = this.cart.items[i]
+            const obj = {
+                product: item.product.id,
+                quantity: item.quantity,
+                price: item.product.price * item.quantity
+            }
+
+
+            items.push(obj)
+        }
+
+        const data = {
+            'first_name': this.first_name,
+            'last_name': this.last_name,
+            'email': this.email,
+            'address': this.address,
+            'zipcode': this.zipcode,
+            'place': this.place,
+            'phone': this.phone,
+            'items': items,
+            'stripe_token': token.id
+        }
+
+        await axios
+        .post('/api/v1/checkout/', data)
+            .then(response => {
+                this.$store.commit('clearCart') 
+                this.$router.push('/cart/success')
+            })
+            .catch(err => {
+                this.errors.push('Something Went Wrong Please Try Again')
+
+            })
+
+
+            this.$store.commit('setIsLoading', false)
 
     }
 },
