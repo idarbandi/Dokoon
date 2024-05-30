@@ -30,6 +30,22 @@ _ DONE Create a Simple My Account Page
 _ DONE Proceed to Checkout (Authentication)
 _ DONE Create a Simple Successful Payment Page
 _ DONE Show My Orders on My Account Page
+TODO : 
+    - Create a Server in Iranian Cloud Service Providers (Fandogh, Liara and ....)
+    - Install Softwares 
+    - Create a PostgreSQL Server
+    - Create Users and Virtual Environments
+    - Install Packages and Get Project Files
+    - Create Seperate Settingfiles for Production
+    - Setup Gunicorn
+    - Setup Supervisor
+    - Setup Supervisor
+    - Obtain  SSL Certification
+    - Setup Nginx
+_ Deploy Vue
+    - Generate Files Locally
+    - Send Files To Server
+    - Setup Nginx Virtual Host
 
 
 CAUTION : Due to The High Quality of This Project I want to give It a 100% (1:52:38)
