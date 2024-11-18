@@ -9,3 +9,5 @@ Follow these steps to install and set up the project:
 1. **Clone the repository**:
    ```sh
    git clone https://github.com/idarbandi/Dokoon.git
+cd Dokoon
+npm install
