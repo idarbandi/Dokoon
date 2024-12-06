@@ -1,0 +1,55 @@
+_ DONE Install and Setup Django
+_ DONE Install and Setup Vue 
+_ DONE Include Font Awesome
+_ DONE Setup The Base Templates
+_ DONE Create Django apps and Models for Products
+_ DONE Create Serializer and Views for The Products
+_ DONE Create Simple Front Page 
+_ DONE View a Product
+    _ Create a Viewset in Django
+    _ Create a View Page for Showing The Product
+    _ Add Link to Detail The Page
+_ DONE sette op vuex / state
+_ DONE Make it Possible to Add to a Cart
+    _ add functionality to a cart
+    _ initialize store in app.vuex
+    _ add button to product Page
+    _ show a toast message
+_ DONE implement a loading bar
+_ DONE set Document Title (All Pages)
+_ DONE Make it Possible to view a Category
+    _ Convert the Product to a Component
+_ NOT DONE Add Search Capability
+_ DONE Change Content of Cart
+    _ Increament Content of Cart
+    _ Decreament Content of Cart
+    _ Remove item From Cart
+_ DONE Make it Possible To Login
+_ DONE Make it Possible To Signin As Well
+_ DONE Create a Simple My Account Page
+_ DONE Proceed to Checkout (Authentication)
+_ DONE Create a Simple Successful Payment Page
+_ DONE Show My Orders on My Account Page
+TODO : 
+    - Create a Server in Iranian Cloud Service Providers (Fandogh, Liara and ....)
+    - Install Softwares 
+    - Create a PostgreSQL Server
+    - Create Users and Virtual Environments
+    - Install Packages and Get Project Files
+    - Create Seperate Settingfiles for Production
+    - Setup Gunicorn
+    - Setup Supervisor
+    - Setup Supervisor
+    - Obtain  SSL Certification
+    - Setup Nginx
+_ Deploy Vue
+    - Generate Files Locally
+    - Send Files To Server
+    - Setup Nginx Virtual Host
+
+
+CAUTION : Due to The High Quality of This Project I want to give It a 100% (1:52:38)
+
+
+
+
